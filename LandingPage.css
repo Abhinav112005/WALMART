@@ -1,0 +1,47 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 20px;
+  }
+  
+  .landing-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .landing-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .landing-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0071dc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .landing-button:hover {
+    background-color: #005bb5;
+  }
+  
