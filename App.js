@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
 
-function App() {
+const LoginPage = ({ onLogin }) => {
+  const [userId, setUserId] = useState('');
+  const [password, setPassword] = useState('');
+  const [location, setLocation] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onLogin();
+    navigate('/landing');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="login-container">
+      <h1 className="login-heading">Walmart Store</h1>
+      <form className="login-form" onSubmit={handleSubmit}>
+        {/* Input fields here */}
+        <button type="submit" className="login-button">Sign In</button>
+      </form>
     </div>
   );
 }
 
-export default App;
+export default LoginPage;
